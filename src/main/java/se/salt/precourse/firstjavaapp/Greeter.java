@@ -4,7 +4,6 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.time.LocalDate;
-import java.time.LocalTime;
 import java.time.LocalDateTime;
 import java.time.Duration;
 import java.time.format.DateTimeFormatter;
@@ -21,10 +20,7 @@ public class Greeter {
       LocalDateTime date1 = inputDate.atStartOfDay();
       LocalDateTime date2 = LocalDateTime.now();
 
-
       long daysBetween = Duration.between(date2, date1).toDays();
-
-      // String stringDate = string.valueOf(daysBetween);
 
       return "Today it is " + Long.toString(daysBetween) + " days left until the course starts";
   }
