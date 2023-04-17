@@ -7,6 +7,7 @@ import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.Duration;
 import java.time.format.DateTimeFormatter;
+import java.util.Scanner;
 
 public class Greeter {
   private static String greet(String namePassedIn) {
@@ -15,7 +16,8 @@ public class Greeter {
 
   private static String getDaysLeftInCourse(String datePassedIn) {
       DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy-MM-dd");
-
+      // from the class
+      var scanner = new Scanner(System.in);
       LocalDate inputDate = LocalDate.parse(datePassedIn, dtf);
       LocalDateTime date1 = inputDate.atStartOfDay();
       LocalDateTime date2 = LocalDateTime.now();
